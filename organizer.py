@@ -2,8 +2,16 @@ from email import message
 import os
 import shutil
 import logging
+import json
 
-SOURCE_FOLDER = os.path.join(os.getcwd(), "test")
+with open("config.json", "r") as file:
+    config = json.load(file)
+
+SOURCE_FOLDER = os.path.join(os.getcwd(), config["source_folder"])
+ENABLE_LOGGING = config["enable_logging"]
+
+print("Source Folder:", SOURCE_FOLDER)
+print("Logging Enabled:", ENABLE_LOGGING)
 
 LOG_FOLDER = "logs"
 os.makedirs(LOG_FOLDER, exist_ok=True)
