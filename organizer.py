@@ -7,7 +7,7 @@ import json
 with open("config.json", "r") as file:
     config = json.load(file)
 
-SOURCE_FOLDER = os.path.join(os.getcwd(), config["source_folder"])
+SOURCE_FOLDER = config["source_folder"]
 ENABLE_LOGGING = config["enable_logging"]
 
 print("Source Folder:", SOURCE_FOLDER)

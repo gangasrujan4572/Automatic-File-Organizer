@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import filedialog
 import json
 import os
+import watcher
 
 # ---------------- CONFIG ---------------- #
 
@@ -41,13 +42,27 @@ def browse_folder():
 
 
 def start_monitoring():
-    status.config(text="🟢 Monitoring Started", fg="green")
+
+    save_settings()
+
+    watcher.start_watching()
+
+    status.config(
+        text="🟢 Monitoring...",
+        fg="green"
+    )
 
     # Later we will start watcher.py here
 
 
 def stop_monitoring():
-    status.config(text="🔴 Monitoring Stopped", fg="red")
+
+    watcher.stop_watching()
+
+    status.config(
+        text="🔴 Stopped",
+        fg="red"
+    )
 
     # Later we will stop watcher.py here
 
