@@ -33,3 +33,16 @@ python organizer.py
 
 - ✅ File categorization completed
 - 🚧 Real-time monitoring in progress
+
+## 🚀 Roadmap
+
+- [x] File Categorization
+- [x] Real-time Monitoring
+- [x] Duplicate File Handling
+- [x] Logging
+- [x] Config File
+- [x] GUI
+- [ ] Live Activity Panel
+- [ ] Statistics
+- [ ] Dark Mode
+- [ ] Windows Executable

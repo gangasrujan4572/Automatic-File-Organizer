@@ -63,7 +63,7 @@ def organize_file(file_path):
                 message = f"Moved: {file_name} → {folder}/{unique_name}"
 
                 print(f"✅ {message}")
-                logging.info(message)
+                
             except Exception as e:
                 error = f"Error moving {file_name}: {e}"
                 print(f"❌ {error}")
